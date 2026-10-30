@@ -57,6 +57,7 @@ body {
 .logo-text { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: 24px; letter-spacing: 0.01em; }
 .logo-amp { color: var(--gold); }
 .header-phone {color: #122a48; font-size: 16px; font-weight: 600}
+.logo-size {width: 125px}
 
 /* ---------- Buttons ---------- */
 
@@ -246,6 +247,7 @@ body {
   .card-grid, .footer-grid { grid-template-columns: 1fr; }
   .section-title { font-size: 18px; }
   .hero-sub {display: none}
+  .logo-size {max-width: 88px}
 }
 
 
