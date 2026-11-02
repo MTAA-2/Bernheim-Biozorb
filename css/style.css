@@ -57,7 +57,7 @@ body {
 .logo-text { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: 24px; letter-spacing: 0.01em; }
 .logo-amp { color: var(--gold); }
 .header-phone {color: #122a48; font-size: 16px; font-weight: 600}
-.logo-size {width: 125px}
+.logo-size {width: 115px}
 
 /* ---------- Buttons ---------- */
 
@@ -76,9 +76,31 @@ body {
 .btn--light { background: #fff; color: var(--navy); }
 .btn--cta { background: #c2a05e; color: #ffffff; padding: 15px 34px; font-size: 16px; box-shadow: 0 8px 20px rgba(194, 160, 94, 0.35); }
 .btn--cta:hover { background: #d8bc7a; }
+/* Section with full-bleed background image, parallax scroll,
+   and a color overlay. Adjust --overlay-opacity: 0 = no tint, 1 = solid color. */
+.section-parallax {
+  --overlay-rgb: 9, 29, 68;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
+  --overlay-opacity: 0.75;        /* overlay strength */
+  background-image:
+    linear-gradient(
+      rgba(var(--overlay-rgb), var(--overlay-opacity)),
+      rgba(var(--overlay-rgb), var(--overlay-opacity))
+    ),
+    url("https://consumerclaimnow.com/images/hero-background.jpg");   /* placeholder — replace with the image URL to be provided */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;   /* this line is the parallax effect */
+  color: #fff;                    /* text over a dark overlay */
 
+
+/* iOS Safari ignores background-attachment: fixed — fall back to a normal scroll */
+@media (max-width: 900px) {
+  .section-parallax { background-attachment: scroll; }
+
+}
+}
 /* ---------- Hero ---------- */
-
 .hero {
   background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 55%, var(--navy-3) 100%);
   color: #fff;
@@ -247,7 +269,7 @@ body {
   .card-grid, .footer-grid { grid-template-columns: 1fr; }
   .section-title { font-size: 18px; }
   .hero-sub {display: none}
-  .logo-size {max-width: 88px}
+  .logo-size {width: 80px}
 }
 
 
