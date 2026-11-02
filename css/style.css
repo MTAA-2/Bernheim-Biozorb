@@ -51,12 +51,12 @@ body {
 
 /* ---------- Header ---------- */
 
-.site-header { background: #fff; border-bottom: 1px solid var(--line); }
+.site-header { background: #0a072f; border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 8px; padding-bottom: 0px; }
 .logo { text-decoration: none; color: var(--navy); }
 .logo-text { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: 24px; letter-spacing: 0.01em; }
 .logo-amp { color: var(--gold); }
-.header-phone {color: #122a48; font-size: 16px; font-weight: 600}
+.header-phone {color: #fcfcfc; font-size: 16px; font-weight: 600}
 .logo-size {width: 115px}
 
 /* ---------- Buttons ---------- */
