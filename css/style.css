@@ -76,11 +76,12 @@ body {
 .btn--light { background: #fff; color: var(--navy); }
 .btn--cta { background: #c2a05e; color: #ffffff; padding: 15px 34px; font-size: 16px; box-shadow: 0 8px 20px rgba(194, 160, 94, 0.35); }
 .btn--cta:hover { background: #d8bc7a; }
+
 /* Section with full-bleed background image, parallax scroll,
    and a color overlay. Adjust --overlay-opacity: 0 = no tint, 1 = solid color. */
 .section-parallax {
   --overlay-rgb: 9, 29, 68;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
-  --overlay-opacity: 0.75;        /* overlay strength */
+  --overlay-opacity: 0.81;        /* overlay strength */
   background-image:
     linear-gradient(
       rgba(var(--overlay-rgb), var(--overlay-opacity)),
