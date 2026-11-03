@@ -51,7 +51,7 @@ body {
 
 /* ---------- Header ---------- */
 
-.site-header { background: #0a072f; border-bottom: 1px solid var(--line); }
+.site-header { background: linear-gradient(#fff, #888); ; }
 .header-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 8px; padding-bottom: 0px; }
 .logo { text-decoration: none; color: var(--navy); }
 .logo-text { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: 24px; letter-spacing: 0.01em; }
@@ -104,7 +104,7 @@ body {
 
 /* Section with full-bleed background image, parallax scroll,
    and a color overlay. Adjust --overlay-opacity: 0 = no tint, 1 = solid color. */
-.section-parallax-2 {
+.section-parallax {
   --overlay-rgb: 9, 29, 68;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
   --overlay-opacity: 0.81;        /* overlay strength */
   background-image:
