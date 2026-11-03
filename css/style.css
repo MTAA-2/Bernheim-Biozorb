@@ -44,7 +44,7 @@ body {
 
 /* ---------- Top bar ---------- */
 
-.topbar { background: var(--navy); color: #d6d6d6; font-size: 13px; }
+.topbar { background: #000; color: #d6d6d6; font-size: 13px; }
 .topbar-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 9px; padding-bottom: 9px; }
 .topbar .dot { margin: 0 8px; color: var(--gold); }
 .topbar-phone { color: #fff; font-weight: 700; text-decoration: none; letter-spacing: 0.02em; }
