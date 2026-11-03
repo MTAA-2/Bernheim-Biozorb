@@ -105,7 +105,7 @@ body {
 /* Section with full-bleed background image, parallax scroll,
    and a color overlay. Adjust --overlay-opacity: 0 = no tint, 1 = solid color. */
 .section-parallax {
-  --overlay-rgb: 9, 29, 68;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
+  --overlay-rgb: 84, 87, 91;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
   --overlay-opacity: 0.81;        /* overlay strength */
   background-image:
     linear-gradient(
@@ -128,11 +128,24 @@ body {
 }
 /* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 55%, var(--navy-3) 100%);
-  color: #fff;
-  padding: 8px 0 15px; /* extra bottom room for the overlapping form card */
-  position: relative;
+  --overlay-rgb: 84, 87, 91;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
+  --overlay-opacity: 0.81;        /* overlay strength */
+  background-image:
+    linear-gradient(
+      rgba(var(--overlay-rgb), var(--overlay-opacity)),
+      rgba(var(--overlay-rgb), var(--overlay-opacity))
+    ),
+    url("https://personaljusticeclaim.com/images/halls-of-justice.jpg");   /* placeholder — replace with the image URL to be provided */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;   /* this line is the parallax effect */
   overflow: visible;
+  /* iOS Safari ignores background-attachment: fixed — fall back to a normal scroll */
+@media (max-width: 900px) {
+  .section-parallax { background-attachment: scroll; }
+
+}
 }
 
 .hero-inner {
