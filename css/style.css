@@ -1,10 +1,10 @@
 /* ============================================================
    Medical Malpractice landing page — modernized design
    ------------------------------------------------------------
-   Deep navy, indigo and charcoal with muted gold — palette matched to the live
-   consumerclaimhelp.com (framework CSS identical to the uploaded file except
-   colors, plus one added rule: .section-parallax-2, a second parallax
-   placeholder for the dark section). The hero form card OVERFLOWS the hero:
+   Dark navy and charcoal, gold/bronze, firm green and rose-pink — palette matched
+   to biozorblawsuit.com (framework CSS identical to the uploaded file except
+   colors, plus the .header-phone rule restored because that site displays a
+   phone number). The hero form card OVERFLOWS the hero:
    it is pulled down past the hero's bottom edge (negative
    bottom margin) so it overlaps the section beneath it, and
    the form frame itself scrolls internally (overflow: auto)
@@ -17,11 +17,11 @@
    ============================================================ */
 
 :root {
-  --navy: #13294b;
-  --navy-2: #1e1a5e;
+  --navy: #122a48;
+  --navy-2: #1a1a1a;
   --navy-3: #262626;
-  --gold: #c9a86a;
-  --gold-light: #e8c87a;
+  --gold: #009a44;
+  --gold-light: #8bc34a;
   --ink: #1a1a1a;
   --muted: #5f5f5f;
   --bg: #f2f2f2;
@@ -51,11 +51,13 @@ body {
 
 /* ---------- Header ---------- */
 
-.site-header { background: #ffffff; border-bottom: 1px solid var(--line); }
+.site-header { background: #0a072f; border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 8px; padding-bottom: 0px; }
 .logo { text-decoration: none; color: var(--navy); }
 .logo-text { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: 24px; letter-spacing: 0.01em; }
 .logo-amp { color: var(--gold); }
+.header-phone {color: #fcfcfc; font-size: 16px; font-weight: 600}
+.logo-size {width: 115px}
 
 /* ---------- Buttons ---------- */
 
@@ -72,11 +74,34 @@ body {
 .btn--small { background: var(--navy); color: #fff; padding: 10px 12px; font-size: 12px; }
 .btn--small:hover { background: var(--navy-2); }
 .btn--light { background: #fff; color: var(--navy); }
-.btn--cta { background: #c9a86a; color: #ffffff; padding: 15px 34px; font-size: 16px; box-shadow: 0 8px 20px rgba(201, 168, 106, 0.35); }
+.btn--cta { background: #c2a05e; color: #ffffff; padding: 15px 34px; font-size: 16px; box-shadow: 0 8px 20px rgba(194, 160, 94, 0.35); }
 .btn--cta:hover { background: #d8bc7a; }
 
-/* ---------- Hero ---------- */
+/* Section with full-bleed background image, parallax scroll,
+   and a color overlay. Adjust --overlay-opacity: 0 = no tint, 1 = solid color. */
+.section-parallax {
+  --overlay-rgb: 9, 29, 68;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
+  --overlay-opacity: 0.81;        /* overlay strength */
+  background-image:
+    linear-gradient(
+      rgba(var(--overlay-rgb), var(--overlay-opacity)),
+      rgba(var(--overlay-rgb), var(--overlay-opacity))
+    ),
+    url("https://personaljusticeclaim.com/images/halls-of-justice.jpg");   /* placeholder — replace with the image URL to be provided */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;   /* this line is the parallax effect */
+  color: #fff;                    /* text over a dark overlay */
 
+
+/* iOS Safari ignores background-attachment: fixed — fall back to a normal scroll */
+@media (max-width: 900px) {
+  .section-parallax { background-attachment: scroll; }
+
+}
+}
+/* ---------- Hero ---------- */
 .hero {
   background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 55%, var(--navy-3) 100%);
   color: #fff;
@@ -118,42 +143,6 @@ body {
   font-size: 13px;
   font-weight: 600;
   color: #f2f2f2;
-}
-
-/* Section with full-bleed background image, parallax scroll,
-   and a color overlay. Adjust --overlay-opacity: 0 = no tint, 1 = solid color. */
-.section-parallax {
-  --overlay-rgb: 19, 41, 75;      /* overlay color as R, G, B — this is your navy #13294b */
-  --overlay-opacity: 0.75;        /* overlay strength */
-  background-image:
-    linear-gradient(
-      rgba(var(--overlay-rgb), var(--overlay-opacity)),
-      rgba(var(--overlay-rgb), var(--overlay-opacity))
-    ),
-    url("https://consumerclaimhelp.com/images/skyline.jpg");   /* placeholder — replace with the image URL to be provided */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;   /* this line is the parallax effect */
-  color: #fff;                    /* text over a dark overlay */
-
-
-/* iOS Safari ignores background-attachment: fixed — fall back to a normal scroll */
-@media (max-width: 900px) {
-  .section-parallax { background-attachment: scroll; }
-
-}
-}
-
-/* Second parallax section (used on the dark "Who Is Calling You?" section) —
-   same overlay as .section-parallax, with its own placeholder image URL. */
-.section-parallax-2 {
-  background-image:
-    linear-gradient(
-      rgba(var(--overlay-rgb), var(--overlay-opacity)),
-      rgba(var(--overlay-rgb), var(--overlay-opacity))
-    ),
-    url("https://consumerclaimhelp.com/images/halls-of-justice.jpg");   /* placeholder — replace with the image URL to be provided */
 }
 
 /* ---------- OVERFLOW FORM CARD ----------
@@ -228,7 +217,7 @@ body {
 .section--dark { background: var(--navy); color: #e6e6e6; }
 .section--dark .lead { color: #d9d9d9; }
 
-.section--gold { background: #eef1f5; text-align: center; }
+.section--gold { background: #f6c1d3; text-align: center; }
 .section--gold .section-title, .section--gold .lead { margin-left: auto; margin-right: auto; }
 
 /* ---------- Cards ---------- */
@@ -279,8 +268,9 @@ body {
   .hero-form { margin-bottom: 1px; }
   .section--after-hero { padding-top:5px; }
   .card-grid, .footer-grid { grid-template-columns: 1fr; }
-  .section-title { font-size: 18px; }
+  .section-title { font-size: 26px; }
   .hero-sub {display: none}
+  .logo-size {width: 80px}
 }
 
 
