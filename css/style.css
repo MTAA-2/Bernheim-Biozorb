@@ -80,8 +80,8 @@ body {
 /* Section with full-bleed background image, parallax scroll,
    and a color overlay. Adjust --overlay-opacity: 0 = no tint, 1 = solid color. */
 .section-parallax {
-  --overlay-rgb: 84, 87, 91;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
-  --overlay-opacity: 0.90;        /* overlay strength */
+  --overlay-rgb: 0, 0, 0;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
+  --overlay-opacity: 0.85;        /* overlay strength */
   background-image:
     linear-gradient(
       rgba(var(--overlay-rgb), var(--overlay-opacity)),
@@ -104,8 +104,8 @@ body {
 
 /* ---------- Hero ---------- */
 .hero {
-  --overlay-rgb: 84, 87, 91;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
-  --overlay-opacity: 0.90;        /* overlay strength */
+   --overlay-rgb: 0, 0, 0;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
+  --overlay-opacity: 0.85;         /* overlay strength */
   background-image:
     linear-gradient(
       rgba(var(--overlay-rgb), var(--overlay-opacity)),
@@ -265,7 +265,7 @@ body {
 .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 36px; }
 .footer-heading { color: #fff; font-size: 16px; margin: 0 0 12px; }
 .footer-text { margin: 0 0 12px; font-size: 15px; }
-.footer-phone { color: var(--gold-light); font-weight: 700; text-decoration: none; }
+.footer-phone { color: #1ca732; font-weight: 700; text-decoration: none; }
 .footer-nav a { display: block; color: #d9d9d9; text-decoration: none; margin-bottom: 8px; font-size: 15px; }
 .footer-nav a:hover { color: #fff; }
 .disclaimer { border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 22px; font-size: 13px; color: #9fb0c3; }
