@@ -105,7 +105,7 @@ body {
 /* ---------- Hero ---------- */
 .hero {
    --overlay-rgb: 0, 0, 0;       /* overlay color as R, G, B — the sample's hero navy #091d44 */
-  --overlay-opacity: 0.85;         /* overlay strength */
+  --overlay-opacity: 0.70;         /* overlay strength */
   background-image:
     linear-gradient(
       rgba(var(--overlay-rgb), var(--overlay-opacity)),
@@ -132,7 +132,7 @@ body {
 }
 
 .hero-eyebrow {
-  color: var(--gold-light);
+  color: #1ca732;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -214,7 +214,7 @@ body {
   text-transform: uppercase;
   margin: 0 0 12px;
 }
-.section-kicker--light { color: var(--gold-light); }
+.section-kicker--light { color: #1ca732; }
 
 .section-title {
   font-family: "Fraunces", Georgia, serif;
